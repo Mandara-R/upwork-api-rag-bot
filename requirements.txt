@@ -1,0 +1,10 @@
+langchain==0.3.25
+langchain-community==0.3.24
+langchain-huggingface==0.1.2
+faiss-cpu==1.9.0.post1
+sentence-transformers==3.3.1
+streamlit==1.38.0
+pypdf==4.3.1
+python-dotenv==1.0.1
+openai==1.40.0
+tiktoken==0.8.0
