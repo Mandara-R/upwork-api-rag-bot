@@ -9,6 +9,13 @@ from langchain_community.vectorstores import FAISS
 from openai import OpenAI
 
 load_dotenv()
+try:
+    import streamlit as st
+    if st.secrets:
+        for key, val in st.secrets.items():
+            os.environ.setdefault(key, str(val))
+except Exception:
+    pass
 
 DEEPINFRA_API_KEY = os.getenv("DEEPINFRA_API_KEY")
 DEEPINFRA_API_BASE = os.getenv("DEEPINFRA_API_BASE", "https://api.deepinfra.com/v1/openai")
